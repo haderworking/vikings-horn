@@ -1,0 +1,261 @@
+/*HEADER*/
+    /*espacio header*/
+        .header__top {
+           height: 80px
+   
+        }
+        .header__bottom {
+            height: 50px
+        }
+        .align-content--vertical-bottom {
+            padding-bottom: 8px;
+        }
+
+
+/*HOME*/
+
+    /*BANNER*/
+        /* tamaño banner*/
+            #slider-template--15257192333412__1653646142d6a7c886 .card {
+                height: 30vh;
+                min-height: 200px;
+
+            }
+
+    /*TESTIMONIALES*/
+        /*background  testimoniales*/
+            #element-template--15257192333412__16553621956de397b6 {
+                background: url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/Enmascarar_grupo_5.png?v=1663888365) right center no-repeat, url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/Rectangulo_65.png?v=1663888361);
+                background-size: contain;
+            }
+        /*avatar testimoniales*/
+            .testimonials--center .testimonial__avatar {
+                justify-content: left;
+            }
+
+    /*NEWSLETTER*/
+        /*background newsletter*/
+            #shopify-section-template--15257192333412__1655112847aaa4cc50{
+                background: url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/logo-background-newsletter.png?v=1663941754) left top no-repeat,
+                url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/fondo-amarillo.png?v=1663941754);
+                background-size: contain;
+                }
+        /* icono*/
+            .newsletter__icon{
+                float: left;
+            }
+
+    /*ICONOS nivel Sonido*/
+        .card__icon--is-img img {
+            width: 80%;
+          height: auto;
+        }
+
+    /*FOOTER*/
+        /*logo footer*/
+        .lazy-image.lazy-image--no-transition.lazyloaded {
+            padding-top: 0% !important;
+            height: 60px;
+        }
+        .lazy-image.lazy-image--no-transition.lazyloaded 
+         img{
+            height: auto;
+            width: auto;
+        }
+
+
+
+/*PRODUCTO*/
+
+    /*Bloque audio*/
+        #bloque_audio_product{
+            width: 60%;
+        }
+    /*Bloque Iconos*/
+
+        .bloque_icon_product{
+            align-items: center;
+            padding: 6px;
+            color: black;
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+
+        }
+
+
+    /*ADITIONAL INFORMATION*/
+        .additional_information_row_1{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: var(--color-accent-cards);
+            color: var(--color-background-cards);
+          border-top-left-radius: 25px;  
+          border-top-right-radius: 25px;
+        text-align: center;
+        }
+
+        .titulo_aditional_information_product, .information_aditional_information_product {
+           // width: 50%;
+            padding: 5px;
+        }
+
+        .additional_information_row_2{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 15px;
+            padding-left: 40px;
+          border-bottom-left-radius: 25px;  
+          border-bottom-right-radius: 25px;
+          border: solid;
+          border-color: hsla(0, 0%, 90%, 0.7); 
+        }
+        .information_aditional_information_product li{
+            margin: 5px;
+
+        }
+
+        .information_aditional_information_product li::before {
+          content: "\2022";
+          color: #A8B3AD;
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+        #additional_information_product h6{
+            margin-top: 1rem;
+        }
+
+
+
+    /*PRODUCTO EN STOCK*/
+    .custom_stock_product
+    {    width: max-content;
+        margin: 5px;
+        border-radius: 11px;
+       text-align: center;
+    font-size: 20px;
+    }
+    .custom_stock_product p{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    }
+
+    /*Comentarios productos*/
+
+    .spr-review{
+    background: url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/Enmascarar_grupo_5.png?v=1663888365) right center no-repeat, url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/Rectangulo_65.png?v=1663888361);
+    }
+
+    .spr-review-header-byline:before {
+    background-color: var(--color-accent-main);
+    //left: auto;
+    //display: none;}
+    .spr-reviews {
+    color: var(--color-background-main);
+    }
+
+    .spr-starratings {
+    float: right;
+    }
+
+    .button--solid{
+    background-color:  var(--color-foreground-main);
+    color: var(--color-text-main);
+    }
+
+    /*//.grid-3 {
+      //  --visible-cols: 2;
+        //--visible-rows: 2;}*/
+
+    .lazy-image .lazy-image--no-transition .lazyloaded img { 
+    width: auto;
+    height: auto}
+
+
+    .grid .footer-item .footer-item__title h5 image {
+    color: white;}
+
+
+/*FILTRO NIVELES*/
+
+    /*Sounds Levels*/
+
+        .custom-filter{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        justify-items: center;
+        justify-content: space-evenly;
+        }
+       
+
+
+/*ESTILOS GENERALES*/
+
+   
+    /*Color botones*/
+        .card .button, .button--solid {
+            color: var(--color-background-cards) !important;
+            background-color: var(--color-accent-cards) !important;
+        }
+
+        .button--download a{
+        color:white;}
+
+        /*.button--large {
+            border: none;
+            background-color: #011E30;
+        }*/
+        .product-custom-liquid{
+            margin-top: 1.75rem;
+        }
+
+
+    /*audios*/
+        audio {
+            width: -webkit-fill-available;
+        }
+
+    /*Altura campo titulo tarjetas producto*/
+        .remove-line-height-space--small{
+        height: 120px;}
+
+    /*Altura campo titulo tarjetas categorias home*/
+    .grid-portable-2 .card .card__text .text-size--regular{
+       height: 50px;}
+
+        @media only screen and (max-width: 400px){
+            .remove-line-height-space--small{
+            height: 170px;}
+
+           #element-template--15257192333412__16553621956de397b6 {
+                background: url(https://cdn.shopify.com/s/files/1/0597/6640/7268/files/Enmascarar_grupo_25.png?v=1666217224);
+            } 
+        }
+
+    /*Cursor menu Nav*/
+        .menu-link{
+        cursor: default;
+        }
+        .menu-link.no-focus-link{
+        cursor: pointer;
+        }
+
+    /*Centrar tarjetas del slider*/
+        .grid-6 {
+        justify-content: center;
+        }
+
+
+    /*Espacio Horizontal*/
+        html, body {
+        max-width: 100% !important;
+        }
