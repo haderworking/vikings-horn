@@ -230,7 +230,7 @@
 
     /*Altura campo titulo tarjetas categorias home*/
     .grid-portable-2 .card .card__text .text-size--regular{
-       height: 50px;}
+       height: 100px;}
 
         @media only screen and (max-width: 400px){
             .remove-line-height-space--small{
