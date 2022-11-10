@@ -99,7 +99,7 @@
         }
 
         .titulo_aditional_information_product, .information_aditional_information_product {
-           // width: 50%;
+           /* // width: 50%; */
             padding: 5px;
         }
 
@@ -154,8 +154,9 @@
 
     .spr-review-header-byline:before {
     background-color: var(--color-accent-main);
-    //left: auto;
-    //display: none;}
+    /* //left: auto;
+    //display: none; */
+    }
     .spr-reviews {
     color: var(--color-background-main);
     }
@@ -230,7 +231,8 @@
 
     /*Altura campo titulo tarjetas categorias home*/
     .grid-portable-2 .card .card__text .text-size--regular{
-       height: 100px;}
+       height: 100px;
+    }
 
         @media only screen and (max-width: 400px){
             .remove-line-height-space--small{
