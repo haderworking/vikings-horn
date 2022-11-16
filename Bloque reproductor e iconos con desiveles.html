@@ -1,0 +1,56 @@
+<!-- Bloque reproductor e iconos con desiveles -->
+
+<div id="audio_iconos">
+    {% if product.type == 'horns' %}
+        {% if product.metafields.my_fields.product_audio  %}
+        <div id="bloque_audio_product">
+            {{product.metafields.my_fields.product_audio}}
+        </div>
+        {% endif %}
+    {% endif %}
+        <div id="icon_product_{{product.metafields.my_fields.prudcut_sku}}" class="bloque_icon_product">
+
+                {% if product.metafields.custom.product_icon_1_label == 'Sound 1' %}
+                    
+                        <div> 
+                            <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/db1.png?v=1664558256" style="
+                            height: 30px;">
+                        </div>
+                {% elsif product.metafields.custom.product_icon_1_label == 'Sound 2' %}
+                        <div> 
+                            <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/db2.png?v=1664558256" style="
+                            height: 30px;">
+                        </div>
+            
+                {% elsif product.metafields.custom.product_icon_1_label == 'Sound 3' %}
+                        <div> 
+                            <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/db3.png?v=1664558256" style="
+                            height: 30px;">
+                        </div>
+                     
+             
+                {% elsif product.metafields.custom.product_icon_1_label == 'PSI 1' %}
+                    
+                        <div> 
+                            <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/psi1.png?v=1664558256" style="
+                            height: 30px;">
+                        </div>
+                {% elsif product.metafields.custom.product_icon_1_label == 'PSI 2' %}
+                        <div> 
+                            <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/psi2.png?v=1664558256" style="
+                            height: 30px;">
+                        </div>
+            
+                {% elsif product.metafields.custom.product_icon_1_label == 'PSI 3' %}
+                        <div> 
+                            <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/psi3.png?v=1664558256" style="
+                            height: 30px;">
+                        </div>
+                     
+                {% endif %}
+                <div>
+                    <strong>{{product.metafields.my_fields.product_inof}}</strong>
+                </div>
+        </div>
+ 
+</div>

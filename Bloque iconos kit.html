@@ -1,0 +1,59 @@
+<!-- Bloque iconos kit -->
+
+{% assign productIncludes =
+    product.metafields.my_fields.product_includes | split: ", "%}
+    {% assign productSpecifications =
+    product.metafields.my_fields.product_specifications | split: ", "%}
+
+    <div class="bloque_icon_product_kit">
+        {% for tag in productIncludes %}
+                {% for product in collections['all'].products %}
+                    {% if product.metafields.my_fields.prudcut_sku == tag %}                        
+                        {% if product.metafields.custom.product_icon_1_label %}
+                            <div id="icon_product_{{product.metafields.my_fields.prudcut_sku}}" class="bloque_icon_product">
+                                <div>
+                                    <strong>{{product.metafields.my_fields.prudcut_sku}}</strong>
+                                 </div>
+                                {% if product.metafields.custom.product_icon_1_label == 'Sound 1' %}                               
+                                    <div> 
+                                        <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/db1.png" style="height: 30px;" alt="Sound Level 1" title="Sound Level">
+                                    </div>
+                                {% elsif product.metafields.custom.product_icon_1_label == 'Sound 2' %}
+                                        <div> 
+                                        <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/db2.png" style="height: 30px;"alt="Sound Level 2"  title="Sound Level">
+                                        </div>
+                            
+                                {% elsif product.metafields.custom.product_icon_1_label == 'Sound 3' %}
+                                        <div> 
+                                        <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/db3.png" style="height: 30px;" alt="Sound Level 3"  title="Sound Level">
+                                        </div>
+                                     
+                             
+                                {% elsif product.metafields.custom.product_icon_1_label == 'PSI 1' %}
+                                    
+                                        <div> 
+                                        <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/psi1.png" style="height: 30px;" alt="PSI Level 1"  title="PSI Level">
+                                        </div>
+                                {% elsif product.metafields.custom.product_icon_1_label == 'PSI 2' %}
+                                        <div> 
+                                        <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/psi2.png" style="height: 30px;" alt="PSI Level 2"  title="PSI Level">
+                                        </div>
+                            
+                                {% elsif product.metafields.custom.product_icon_1_label == 'PSI 3' %}
+                                        <div> 
+                                        <img src="https://cdn.shopify.com/s/files/1/0597/6640/7268/files/psi3.png" style="height: 30px;"alt="PSI Level 3"  title="PSI Level">
+                                        </div>
+                                     
+                                {% endif %}
+
+                                <div>
+                                    <strong>{{product.metafields.my_fields.product_inof}}</strong>
+                                </div>
+
+
+                            </div>
+                        {% endif %}                            
+                    {% endif %}              
+                {% endfor %}
+            {% endfor %}
+    </div>

@@ -1,0 +1,10 @@
+<!-- Bloque availability stock -->
+{% if product.available %}
+<div class="custom_stock_product" style="background-color: #DC9C25; color: white; width: 60%; ">
+      <p >Availability: In stock</p>
+</div>
+{% else %}
+    <div class="custom_stock_product" style="background-color: red; color: black; width: 60%; ">
+       <p >Availability: Not stock</p>
+    </div> 
+{% endif %}

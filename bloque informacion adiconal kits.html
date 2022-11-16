@@ -1,41 +1,55 @@
-{% assign productIncludes =
-product.metafields.my_fields.product_includes | split: ", "%}
-{% assign productSpecifications =
-product.metafields.my_fields.product_specifications | split: ", "%}
+<!-- Bloque Tabla de informacion adiccional -->
+{% if product.metafields.my_fields.product_includes or product.metafields.my_fields.product_specifications %}
 
-<div id="additional_information_product">
-	<div class="additional_information_row_1">
-		<div class="titulo_aditional_information_product">
-			<h6>Product<br>Includes</h6>
-		</div>
-		<div class="titulo_aditional_information_product">
-			<h6>Product<br>Specifications</h6>
-		</div>
-	</div>
-	<div class="additional_information_row_2">
-		<div class="information_aditional_information_product" id="additional_information_product_include">
-			<ul>
-			{% for tag in productIncludes %}
-				{% for product in collections['all'].products %}
-					{% for variant in product.variants %}
-					{% if variant.sku == tag %}
-		  			<li><a href="https://viking-horns-com.myshopify.com{{ product.url }}">{{- product.title }}<br><strong>{{variant.title}} {{variant.sku}}</strong> </a></li>
-		  			{% endif %} 			 
+{% assign productIncludes =
+    product.metafields.my_fields.product_includes | split: ", "%}
+    {% assign productSpecifications =
+    product.metafields.my_fields.product_specifications | split: ", "%}
+
+    <div id="additional_information_product">
+        <div class="additional_information_row_1">
+			{% if product.metafields.my_fields.product_includes %}
+            <div class="titulo_aditional_information_product">
+                <h6>Product Includes</h6>
+            </div>
+			{% endif %}   
+			{% if product.metafields.my_fields.product_specifications %}			          
+            <div class="titulo_aditional_information_product">
+                <h6>Product Specifications</h6>
+            </div>
+			{% endif %}   
+        </div>
+        <div class="additional_information_row_2">
+			<div class="information_aditional_information_product" id="additional_information_product_include">
+				<ul>
+				{% for tag in productIncludes %}
+					{% for product in collections['all'].products %}
+						{% for variant in product.variants %}
+						{% if variant.sku == tag %}
+						<li><a href="https://viking-horns-com.myshopify.com{{ product.url }}">{{- product.title }}<br><strong>
+						{{variant.sku}}
+						{% if variant.title != 'Default Title'%}                    
+							{{variant.title}}
+						{% endif %}
+						</strong> </a></li>
+						{% endif %}              
+						{% endfor %}
 					{% endfor %}
+				
 				{% endfor %}
-  			
-			{% endfor %}
-			</ul>
-		</div>
-		<div class="information_aditional_information_product">
-			<ul >
-			{% for tag in productSpecifications %}
-  			<li>
-  			{{ tag }}
-			</li>
-			{% endfor %}
-		</ul>
-		</div>
-	
-	</div>
-</div>
+				</ul>
+			</div>
+			<div>
+				<ul class="information_aditional_information_product">
+					{% for tag in productSpecifications %}
+					<li>
+					{{ tag }}
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+           
+        </div>
+    </div>
+
+	{% endif %}   
